@@ -10,7 +10,7 @@ use iron::status;
 use router::Router;
 
 fn all_feeds(_req: &mut Request) -> IronResult<Response> {
-    println!("Requested");
+    println!("Requested: {:?}", _req);
     Ok(Response::with((status::Ok, "all feed")))
 }
 
