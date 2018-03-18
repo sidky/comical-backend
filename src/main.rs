@@ -22,6 +22,7 @@ fn main() {
 
     let mut router = Router::new();
 
+    router.get("/", all_feeds, "index");
     router.get("/all", all_feeds, "all");
 
     println!("Server running at {}", host);
