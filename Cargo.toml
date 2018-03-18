@@ -1,0 +1,10 @@
+[package]
+name = "comical-backend"
+version = "0.1.0"
+authors = ["sidky <iamsidky@gmail.com>"]
+
+[dependencies]
+iron = "0.6.0"
+router = "0.6.0"
+diesel = { version = "1.0.0", features = ["postgres"] }
+dotenv = "0.9.0"
