@@ -27,6 +27,9 @@ fn main() {
 
     println!("Server running at {}", host);
 
-    Iron::new(router).http(host).unwrap();
+    match Iron::new(router).http(host) {
+        Ok(v) => println!("Ok: {:?}", v),
+        Err(e) => println!("Error: {}", e)
+    }
 
 }
