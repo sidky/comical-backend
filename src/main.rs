@@ -9,8 +9,13 @@ use iron::prelude::*;
 use iron::status;
 use router::Router;
 
+use std::io::Read;
+
 fn all_feeds(_req: &mut Request) -> IronResult<Response> {
     println!("Requested: {:?}", _req);
+    let mut buffer= String::new();
+    _req.body.read_to_string(&mut buffer).expect("Unable to read body");
+    println!("Request body: {}", buffer);
     Ok(Response::with((status::Ok, "all feed")))
 }
 
