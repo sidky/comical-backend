@@ -18,7 +18,7 @@ fn main() {
         Ok(port) => port,
         Err(_) => 3000
     };
-    let host = SocketAddrV4::new(Ipv4Addr::new(127, 0, 0, 1), host_port);
+    let host = SocketAddrV4::new(Ipv4Addr::new(0, 0, 0, 0), host_port);
 
     let mut router = Router::new();
 
