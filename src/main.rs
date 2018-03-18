@@ -25,6 +25,7 @@ fn main() {
 
     router.get("/", all_feeds, "index");
     router.get("/all", all_feeds, "all");
+    router.post("/all", all_feeds, "all");
 
     println!("Server running at {}", host);
 
