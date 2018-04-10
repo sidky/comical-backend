@@ -1,3 +1,17 @@
+#[macro_use]
+extern crate serde_derive;
+
+extern crate futures;
+extern crate hyper;
+extern crate hyper_rustls;
+extern crate tokio_core;
+extern crate http;
+extern crate reqwest;
+extern crate yup_oauth2;
+
+extern crate serde;
+extern crate serde_json;
+
 extern crate iron;
 extern crate router;
 
@@ -10,6 +24,14 @@ use iron::status;
 use router::Router;
 
 use std::io::Read;
+
+pub mod firebase;
+
+use firebase::auth::*;
+
+//struct ComicServer {
+//    firebase_db: Fireb
+//}
 
 fn all_feeds(_req: &mut Request) -> IronResult<Response> {
     println!("Requested: {:?}", _req);
